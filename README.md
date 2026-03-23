@@ -37,6 +37,13 @@ You can also specify custom input and output directories as arguments:
 python sift_matching.py path/to/input_folder path/to/output_folder
 ```
 
+If you want to save the terminal output to a log file, you can pipe the output using your terminal's features. For example, to save the output to `output_log.txt`:
+
+```bash
+python sift_matching.py > output_log.txt
+```
+*(On Windows PowerShell, use `python sift_matching.py | tee output_log.txt` if you want to see the output on the terminal while it saves to the file)*
+
 #### Output
 The script generates the following artifacts in the output directory (default: `my_results/`):
 
@@ -58,4 +65,11 @@ python split_image.py
 Once generated, you can stitch these overlapping parts back together by running:
 ```bash
 python sift_matching.py pano_photos pano_results
+```
+
+### 3. Cleaning Up Results
+To quickly delete all generated files inside the output directories (`my_results/` and `pano_results/`), run the cleanup script:
+
+```bash
+python clean_results.py
 ```
