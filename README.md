@@ -24,17 +24,19 @@ pip install opencv-python numpy matplotlib
 
 ## Usage
 
-### 1. Panorama Stitching
-Place the images you want to stitch into the input directory (by default `my_photos/`), and run:
+### 1. Default Panorama Stitching (`pano_photos` to `pano_results`)
+Place the images you want to stitch into the default input directory (`pano_photos/`), and run the following command:
 
 ```bash
 python sift_matching.py
 ```
+*(This automatically reads from `pano_photos/` and saves the generated artifacts to `pano_results/`)*
 
-You can also specify custom input and output directories as arguments:
+### 2. Custom Directories (`my_photos` to `my_results`)
+You can specify custom input and output directories directly as arguments. For example, to read images from `my_photos` and save the results to `my_results`, run:
 
 ```bash
-python sift_matching.py path/to/input_folder path/to/output_folder
+python sift_matching.py my_photos my_results
 ```
 
 If you want to save the terminal output to a log file, you can pipe the output using your terminal's features. For example, to save the output to `output_log.txt`:

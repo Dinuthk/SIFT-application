@@ -31,8 +31,8 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
 # ── Config ─────────────────────────────────────────────────────────────────────
-INPUT_DIR     = "my_photos"
-OUTPUT_DIR    = "my_results"
+INPUT_DIR     = "pano_photos"
+OUTPUT_DIR    = "pano_results"
 MATCH_RATIO   = 0.75     # Lowe's ratio test threshold
 MIN_MATCH     = 8        # minimum good matches to attempt homography
 MAX_DRAW      = 60       # max match lines drawn per pair figure
